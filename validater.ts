@@ -129,7 +129,8 @@ class ValidatBuilder {
         }
     }
 
-    /** * Set whether to collect all validation errors or just the first one. If set to true, all validation errors will be collected and included in the validation message. If set to false, only the first validation error will be collected.
+    /** * Set whether to collect all validation errors or just the first one.
+     * If set to true, all validation errors will be collected and included in the validation message. If set to false, only the first validation error will be collected.
      * @param value - A boolean value indicating whether to collect all validation errors (true) or just the first one (false)
      * @return The ValidatBuilder instance for method chaining
      */
@@ -139,7 +140,10 @@ class ValidatBuilder {
     }
 
     /*************** VALIDATION ***************/
-    /** * Validates the input data using the added validators. It iterates through the list of validators and calls their validate method. If there are validation errors, it constructs a validation message based on the collected errors and sets the validation status accordingly. The validation message is constructed by joining all collected error messages with a comma and adding a period at the end. The method returns the ValidationMessage instance containing the validation results.
+    /** * Validates the input data using the added validators.
+     * It iterates through the list of validators and calls their validate method.
+     * If there are validation errors, it constructs a validation message based on the collected errors and sets the validation status accordingly.
+     * The validation message is constructed by joining all collected error messages with a comma and adding a period at the end. The method returns the ValidationMessage instance containing the validation results.
      * @return The ValidationMessage instance containing the validation results, including the validation message, status, and types of errors
      */
     public validate() {
@@ -160,7 +164,9 @@ class ValidatBuilder {
 
     /*************** VALIDATER ***************/
 
-    /** * Add a text validator to the ValidatBuilder. This validator checks if the provided text is not empty, and if its length is within the specified maximum and minimum size limits. The type parameter is used to specify the type of text being validated (e.g., "username", "email", etc.) for error message purposes.
+    /** * Add a text validator to the ValidatBuilder.
+     * This validator checks if the provided text is not empty, and if its length is within the specified maximum and minimum size limits.
+     * The type parameter is used to specify the type of text being validated (e.g., "username", "email", etc.) for error message purposes.
      * @param text - The text to validate
      * @param type - A string representing the type of text being validated (e.g., "username", "email", etc.) for error message purposes
      * @param maxSize - The maximum allowed length of the text
@@ -183,7 +189,11 @@ class ValidatBuilder {
 
         return this;
     }
-    /** * Add a password validator to the ValidatBuilder. This validator checks if the provided passwords meet the specified maximum and minimum size limits, and if they match each other. The password1 parameter is the primary password to validate, while password2 is the confirmation password that must match password1. The type parameter is used to specify the type of password being validated (e.g., "password") for error message purposes.
+
+    /** * Add a password validator to the ValidatBuilder.
+     * This validator checks if the provided passwords meet the specified maximum and minimum size limits, and if they match each other.
+     * The password1 parameter is the primary password to validate, while password2 is the confirmation password that must match password1.
+     * The type parameter is used to specify the type of password being validated (e.g., "password") for error message purposes.
      * @param password1 - The primary password to validate
      * @param password2 - The confirmation password that must match password1
      * @param maxSize - The maximum allowed length of the passwords
@@ -207,7 +217,9 @@ class ValidatBuilder {
         return this;
     }
 
-    /** * Add a NIC validator to the ValidatBuilder. This validator checks if the provided NIC number is not empty and if its length is either 10 or 12 characters, which are common formats for NIC numbers. The error messages will indicate whether the NIC number is missing or invalid based on these criteria.
+    /** * Add a NIC validator to the ValidatBuilder.
+     * This validator checks if the provided NIC number is not empty and if its length is either 10 or 12 characters, which are common formats for NIC numbers.
+     * The error messages will indicate whether the NIC number is missing or invalid based on these criteria.
      * @param nic - The NIC number to validate
      * @return The ValidatBuilder instance for method chaining
      */
@@ -216,7 +228,8 @@ class ValidatBuilder {
         return this;
     }
 
-    /** * Add a birthday validator to the ValidatBuilder. This validator checks if the provided date is a valid birthday date.
+    /** * Add a birthday validator to the ValidatBuilder.
+     * This validator checks if the provided date is a valid birthday date.
      * @param date - The date to validate
      * @return The ValidatBuilder instance for method chaining
      */
@@ -225,7 +238,8 @@ class ValidatBuilder {
         return this;
     }
 
-    /** * Add an email validator to the ValidatBuilder. This validator checks if the provided email is valid and if it matches the confirmation email.
+    /** * Add an email validator to the ValidatBuilder.
+     * This validator checks if the provided email is valid and if it matches the confirmation email.
      * @param email - The email to validate
      * @param witchEmail - The confirmation email that must match the primary email
      * @return The ValidatBuilder instance for method chaining
@@ -235,7 +249,9 @@ class ValidatBuilder {
         return this;
     }
 
-    /** * Add a mobile number validator to the ValidatBuilder. This validator checks if the provided mobile number is valid based on a specific regex pattern. The name parameter is used to specify the type of mobile number being validated (e.g., "mobile number") for error message purposes.
+    /** * Add a mobile number validator to the ValidatBuilder.
+     * This validator checks if the provided mobile number is valid based on a specific regex pattern.
+     * The name parameter is used to specify the type of mobile number being validated (e.g., "mobile number") for error message purposes.
      * @param mobile - The mobile number to validate
      * @param name - A string representing the type of mobile number being validated (e.g., "mobile number") for error message purposes
      * @return The ValidatBuilder instance for method chaining
